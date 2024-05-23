@@ -32,11 +32,11 @@
 </template>
 
 <script lang="ts" setup name="HomePage">
-  import { computed } from 'vue';
   import { useUserStore } from '@/store/modules/user';
   import { setLang } from '@/i18n';
   import { useI18n } from 'vue-i18n';
   import { Github, Check } from '@nutui/icons-vue';
+  import { aqscqk } from '@/api';
 
   const { locale } = useI18n();
 
@@ -50,6 +50,11 @@
   const changeLang = (type) => {
     setLang(type);
   };
+
+  const jhrq = '2024-05-21';
+  aqscqk({ jhrq }).then((res) => {
+    console.log(res);
+  });
 </script>
 <style lang="scss">
   .header {

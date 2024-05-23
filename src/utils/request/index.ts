@@ -1,13 +1,21 @@
 import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
 import { showToast } from 'vant';
+import { useUserStore } from '@/store/modules/user';
 
 const service: AxiosInstance = axios.create({
   withCredentials: false,
   timeout: 10000,
+  headers: {
+    Authorization: 'Basic c3dvcmQ6c3dvcmRfc2VjcmV0',
+    'Tenant-Id': '000000',
+  },
+  // baseURL: import.meta.env.BASE_URL,
+  baseURL: import.meta.env.VITE_URL_PREFIX,
 });
-
 service.interceptors.request.use(
   (config: InternalAxiosRequestConfig) => {
+    const userStore = useUserStore();
+    config.headers['Blade-Auth'] = `Bearer ${userStore.getToken}`;
     return config;
   },
   (error: AxiosError) => {

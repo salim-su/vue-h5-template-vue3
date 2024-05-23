@@ -7,6 +7,7 @@ const router: Router = createRouter({
 });
 
 router.beforeEach(async (_to, _from, next) => {
+  document.title = _to.meta.title ? (_to.meta.title as string) : '';
   next();
 });
 

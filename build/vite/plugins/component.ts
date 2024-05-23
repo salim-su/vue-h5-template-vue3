@@ -14,6 +14,7 @@ const NutUIResolver = () => {
         name: partialName,
         from: '@nutui/nutui',
         sideEffects: `@nutui/nutui/dist/packages/${partialName.toLowerCase()}/style`,
+        // sideEffects: `@nutui/nutui/dist/style.css`,
       };
     }
   };

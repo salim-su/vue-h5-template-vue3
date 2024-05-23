@@ -21,6 +21,7 @@ import { ConfigVisualizerConfig } from './visualizer';
 // import basicSsl from '@vitejs/plugin-basic-ssl';
 
 export function createVitePlugins(env: ViteEnv, isBuild: boolean) {
+  console.log(env);
   const { VITE_USE_MOCK, VITE_USE_ERUDA, VITE_USE_COMPRESS, VITE_USE_REPORT } = env;
 
   const vitePlugins: (PluginOption | PluginOption[])[] = [

@@ -1,7 +1,7 @@
 export const routes = [
   {
     path: '/',
-    redirect: '/home',
+    redirect: '/loading',
     component: () => import('@/layout/basic/index.vue'),
     children: [
       {
@@ -48,11 +48,37 @@ export const routes = [
     ],
   },
   {
+    path: '/loading',
+    component: () => import('@/views/loading/loading.vue'),
+    meta: {
+      title: 'loading',
+      keepAlive: true,
+    },
+  },
+  {
     name: 'login',
     path: '/login',
     component: () => import('@/views/login/index.vue'),
     meta: {
-      title: '',
+      title: 'login',
+      keepAlive: true,
+    },
+  },
+  {
+    name: 'login-system',
+    path: '/login-system',
+    component: () => import('@/views/login-system/login-system.vue'),
+    meta: {
+      title: 'login-system',
+      keepAlive: true,
+    },
+  },
+  {
+    name: 'register',
+    path: '/register',
+    component: () => import('@/views/register/register.vue'),
+    meta: {
+      title: '注册',
       keepAlive: true,
     },
   },

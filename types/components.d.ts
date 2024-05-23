@@ -17,6 +17,7 @@ declare module 'vue' {
     NutFormItem: typeof import('@nutui/nutui')['FormItem']
     NutGrid: typeof import('@nutui/nutui')['Grid']
     NutGridItem: typeof import('@nutui/nutui')['GridItem']
+    NutInput: typeof import('@nutui/nutui')['Input']
     NutSwiper: typeof import('@nutui/nutui')['Swiper']
     NutSwiperItem: typeof import('@nutui/nutui')['SwiperItem']
     NutTabbar: typeof import('@nutui/nutui')['Tabbar']
@@ -24,8 +25,14 @@ declare module 'vue' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     VanButton: typeof import('vant/es')['Button']
+    VanCellGroup: typeof import('vant/es')['CellGroup']
+    VanCountDown: typeof import('vant/es')['CountDown']
+    VanField: typeof import('vant/es')['Field']
+    VanLoading: typeof import('vant/es')['Loading']
     VanNavBar: typeof import('vant/es')['NavBar']
+    VanUploader: typeof import('vant/es')['Uploader']
     VarButton: typeof import('@varlet/ui')['_ButtonComponent']
+    VarInput: typeof import('@varlet/ui')['_InputComponent']
     VarSpace: typeof import('@varlet/ui')['_SpaceComponent']
   }
 }
