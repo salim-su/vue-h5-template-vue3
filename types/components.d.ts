@@ -28,6 +28,7 @@ declare module 'vue' {
     VanCellGroup: typeof import('vant/es')['CellGroup']
     VanCountDown: typeof import('vant/es')['CountDown']
     VanField: typeof import('vant/es')['Field']
+    VanForm: typeof import('vant/es')['Form']
     VanLoading: typeof import('vant/es')['Loading']
     VanNavBar: typeof import('vant/es')['NavBar']
     VanUploader: typeof import('vant/es')['Uploader']
